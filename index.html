@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Sir KetaLot</title>
+  </head>
+  <body>
+
+    <main>
+
+      <div id="game-intro">
+        <img src="media/sir-ketalot-high-resolution-logo.png" alt="" class="logo-img"/>
+        <button id="start-button">Go Party!!!</button>
+        <p>Use the left and right arrow to control Sir Ketalot</p>
+        <img src="" alt="" />
+      </div>
+
+      <div id="game-container">
+        <div>
+          <h2>Stats</h2>
+          <p>Score: <span id="score">0</span></p>
+          <p>Health: <span id="health">100%</span></p>
+        </div>
+        <div id="game-screen"></div>
+      </div>
+      <div id="game-end">
+        <img src="media/sir-ketalot-high-resolution-logo.png" alt="" class="logo-img"/>
+        <h2>Game Over</h2>
+        <p>Your score is <span id="final-score">0</span></p>
+        <button id="restart-button">Restart</button>
+      </div>
+
+    </main>
+
+    <script src="src/game.js"></script>
+    <script src="src/script.js"></script>
+  </body>
+
+</html>
