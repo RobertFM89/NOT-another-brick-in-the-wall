@@ -1,0 +1,74 @@
+body {
+    background-color: hsla(295, 67%, 71%, 0.281);
+    display: flex;
+    padding: 50px 200px;
+    text-align: center;
+}
+
+#game-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+   padding: 40px 4px;
+}
+
+#start-button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background-color: rgb(83, 128, 224);
+    color: #141816;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.logo-img {
+    width: 200%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+}
+.tribe-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    padding: 40px 4px;
+}
+
+#game-screen {
+    display: none;
+    border-radius: 25px;
+    align-content: center;
+    padding: 40px 4px;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../media/background-game-screen.webp);
+    background-size:cover;
+    background-position: center;
+}
+
+#game-screen.active {
+    display: block;
+    
+}
+
+#game-end {
+    display: none;
+    padding: 40px 4px;
+}
+
+#game.intro p {
+    font-size: 1.5em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

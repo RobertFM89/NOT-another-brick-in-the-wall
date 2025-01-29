@@ -11,20 +11,37 @@
     <main>
 
       <div id="game-intro">
-        <img src="media/sir-ketalot-high-resolution-logo.png" alt="" class="logo-img"/>
-        <button id="start-button">Go Party!!!</button>
-        <p>Use the left and right arrow to control Sir Ketalot</p>
-        <img src="" alt="" />
+        <img src="./media/isla_tribe-modified.png" alt="" class="tribe-img"/>
+        <br>
+        <button id="start-button">  Start  </button>
+        
+        <div class="arrow-keys">
+            <img src="./media/icons8-double-left.gif" alt="">
+            <img src="./media/icons8-double-right.gif" alt="">
+        </div>
+        
       </div>
 
       <div id="game-container">
+        
         <div>
+          <button id="rules-btn" class= "btn rules-btn">Show rules</button>
+          <div id="rules" class="rules">
+            <h2>Rules</h2>
+            <p>1. Use the left and right arrow keys to move the character.</p>
+            <p>2. Collect the coins to increase your score.</p>
+            <p>3. Avoid the obstacles to prevent losing health.</p>
+            <p>4. The game ends when you lose all your 3 lives.</p>
+            <button id="close-btn" class="btn close-btn">Close</button>
+
+          </div>
           <h2>Stats</h2>
           <p>Score: <span id="score">0</span></p>
-          <p>Health: <span id="health">100%</span></p>
+          <p>Health: <span id="lives">3</span></p>
         </div>
         <div id="game-screen"></div>
       </div>
+      
       <div id="game-end">
         <img src="media/isla_tribe-modified.png" alt="" class="logo-img"/>
         <h2>Game Over</h2>
@@ -36,6 +53,7 @@
 
     <script src="src/game.js"></script>
     <script src="src/script.js"></script>
+    <script src="src/index.js"></script>
   </body>
 
 </html>
