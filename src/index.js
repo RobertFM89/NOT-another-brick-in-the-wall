@@ -3,6 +3,7 @@ window.onload = function () {
     const restartButton = document.getElementById("restart-btn");
     let game; 
 
+
     startButton.addEventListener("click", function () {
         startGame();
     });
@@ -16,8 +17,7 @@ window.onload = function () {
         document.getElementById("game-over").style.display = "none";
         document.getElementById("canvas").style.display = "block";
 
-        game = new Game();
-        game.start(); // Llamar al método start() de la clase Game
+       // Llamar al método start() de la clase Game
     }
 
     function restartGame() {
