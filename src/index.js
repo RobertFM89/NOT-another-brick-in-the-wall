@@ -3,6 +3,7 @@ window.onload = function () {
     const restartButton = document.getElementById("restart-btn");
     let game; 
 
+    
 
     startButton.addEventListener("click", function () {
         startGame();
@@ -13,18 +14,20 @@ window.onload = function () {
     });
 
     function startGame() {
+
         document.getElementById("game-intro").style.display = "none";
         document.getElementById("game-over").style.display = "none";
         document.getElementById("canvas").style.display = "block";
-
+        newGame();
        // Llamar al método start() de la clase Game
     }
 
     function restartGame() {
         document.getElementById("game-over").style.display = "none";
         document.getElementById("canvas").style.display = "block";
+        newGame();
 
-        game = new Game();
-        game.start(); // Llamar al método start() de la clase Game
+        //game = new Game();
+        //game.start(); // Llamar al método start() de la clase Game
     }
 };

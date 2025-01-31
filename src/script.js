@@ -172,9 +172,9 @@ class Ball {
   constructor(canvas) {
     this.canvas = canvas;
     this.x = canvas.width / 2;
-    this.y = canvas.height / 2;
+    this.y = canvas.height - 25;
     this.size = 10;
-    this.speed = 4;
+    this.speed = 3;
     this.dx = 4;
     this.dy = -4;
   }
