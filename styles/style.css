@@ -89,7 +89,7 @@
   }
   
   .btn:hover {
-    background: #222;
+    background: #07306d;
   }
   
   .btn:active {
@@ -106,7 +106,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: #333;
+    background: #0e19bd6c;
     color: #fff;
     min-height: 100vh;
     width: 400px;
@@ -118,5 +118,9 @@
   
   .rules.show {
     transform: translateX(0);
+  }
+
+  #bricks {
+    max-height: 630px;
   }
   
