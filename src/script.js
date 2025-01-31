@@ -1,7 +1,9 @@
 class Game {
   constructor() {
+    this.startScreen = document.getElementById("game-intro");
     this.canvas = document.getElementById("canvas");
     this.gameOverScreen = document.getElementById("game-over");
+    this.finalScoreElement = document.getElementById("final-score");
     this.ctx = this.canvas.getContext("2d");
     this.score = 0;
     this.lives = 3;
@@ -17,6 +19,13 @@ class Game {
 
     this.initEvents();
     this.update();
+  }
+
+  start() {
+    this.canvas.style.height = 600;
+    this.canvas.style.width = 800;
+    this.startScreen.style.display = "none";
+    this.canvas.style.display = "block";
   }
 
   initEvents() {
@@ -86,9 +95,10 @@ class Game {
 
   gameOver() {
     //alert('Game Over');
-
+   
     this.canvas.style.display = "none";
     this.gameOverScreen.style.display = "block";
+    this.finalScoreElement.textContent = `Your Score: ${this.score}`;
   }
 
   allBricksBroken() {
@@ -98,14 +108,19 @@ class Game {
   }
 
   levelUp() {
-    this.level++;
-    this.brickManager.columnCount++;
-    this.ball.speed += 1;
-    this.ball.dx = this.ball.dx > 0 ? this.ball.speed : -this.ball.speed;
-    this.ball.dy = this.ball.dy > 0 ? this.ball.speed : -this.ball.speed;
-    this.brickManager.createBricks();
-    this.ball.reset();
-    this.paddle.reset();
+    if (this.level < 5) {
+        this.level++;
+        this.brickManager.columnCount++;
+        this.ball.speed += 1;
+        this.ball.dx = this.ball.dx > 0 ? this.ball.speed : -this.ball.speed;
+        this.ball.dy = this.ball.dy > 0 ? this.ball.speed : -this.ball.speed;
+        this.brickManager.createBricks();
+        this.ball.reset();
+        this.paddle.reset();
+      } else {
+        alert('You Win!');
+        document.location.reload();
+      }
   }
 }
 
@@ -131,7 +146,7 @@ class Paddle {
   move() {
     this.x += this.dx;
     if (this.x < 0) this.x = 0;
-    if (this.x + this.w > canvas.width) this.x = canvas.width - this.w;
+    if (this.x + this.w > this.canvas.width) this.x = this.canvas.width - this.w;
   }
 
   keyDown(e) {
