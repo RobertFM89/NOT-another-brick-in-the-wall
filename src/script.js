@@ -7,7 +7,7 @@ class Game {
     this.ctx = this.canvas.getContext("2d");
     this.score = 0;
     this.lives = 3;
-    this.level= 1;
+    this.level = 1;
 
     this.paddle = new Paddle(this.canvas);
     this.ball = new Ball(this.canvas);
@@ -18,14 +18,15 @@ class Game {
     this.rules = document.getElementById("rules");
 
     this.initEvents();
-    this.update();
+    //this.update();
   }
 
   start() {
-    this.canvas.style.height = 600;
-    this.canvas.style.width = 800;
+    this.canvas.style.height = "600px";
+    this.canvas.style.width = "800px";
     this.startScreen.style.display = "none";
     this.canvas.style.display = "block";
+    this.update();
   }
 
   initEvents() {
@@ -94,11 +95,9 @@ class Game {
   }
 
   gameOver() {
-    //alert('Game Over');
-   
+    this.finalScoreElement.textContent = `Your Score: ${this.score}`;
     this.canvas.style.display = "none";
     this.gameOverScreen.style.display = "block";
-    this.finalScoreElement.textContent = `Your Score: ${this.score}`;
   }
 
   allBricksBroken() {
@@ -172,9 +171,9 @@ class Ball {
   constructor(canvas) {
     this.canvas = canvas;
     this.x = canvas.width / 2;
-    this.y = canvas.height - 25;
+    this.y = canvas.height / 2;
     this.size = 10;
-    this.speed = 3;
+    this.speed = 4;
     this.dx = 4;
     this.dy = -4;
   }
@@ -296,4 +295,4 @@ class BrickManager {
 }
 
 // Initialize the game
-new Game();
+//new Game();
